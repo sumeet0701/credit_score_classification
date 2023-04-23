@@ -1,0 +1,30 @@
+[2023-04-23 09:26:12,053] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-04-23 09:26:13,795] root - INFO - Training Pipeline Config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact')
+[2023-04-23 09:26:13,795] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-23-09-26-11\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-23-09-26-11\\raw_data', ingested_train_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-23-09-26-11\\ingested_data\\train', ingested_test_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-23-09-26-11\\ingested_data\\test') 
+[2023-04-23 09:26:13,796] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-04-23 09:26:13,809] root - INFO - Connection with DB created successfully!!!
+[2023-04-23 09:26:13,810] root - INFO - Downloading file from: [https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-23-09-26-11\tgz_data\rental_bike_data.zip]
+[2023-04-23 09:26:14,951] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-23-09-26-11\tgz_data\rental_bike_data.zip] has been downloaded successfully
+[2023-04-23 09:26:14,952] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-23-09-26-11\tgz_data\rental_bike_data.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-23-09-26-11\raw_data]
+[2023-04-23 09:26:14,962] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [34] execption block line number: [37]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [26] execption block line number: [28]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_ingestion.py] at 
+                        try block line number: [140] execption block line number: [143]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_ingestion.py] at 
+                        try block line number: [67] execption block line number: [74]
+                        error message: [File is not a zip file]]]]
+[2023-04-23 09:26:14,965] root - INFO - 
+******************** Data Ingestion log completed ********************
+

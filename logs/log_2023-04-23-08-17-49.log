@@ -1,0 +1,15 @@
+[2023-04-23 08:17:50,783] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-04-23 08:17:53,964] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact')
+[2023-04-23 08:17:53,965] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [34] execption block line number: [37]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [25] execption block line number: [28]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\config\Configuration.py] at 
+                        try block line number: [50] execption block line number: [64]
+                        error message: [join() argument must be str, bytes, or os.PathLike object, not 'NoneType']]]
