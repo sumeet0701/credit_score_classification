@@ -1,0 +1,28 @@
+categorical_columns = [
+    'credit_score',
+    'payment_behaviour',
+    'payment_of_min_amount',
+    'credit_history_age',
+    'credit_mix',
+    'type_of_loan',
+    'age',
+    'month'
+]
+
+numerical_columns = [
+    'monthly_balance',
+    'amount_invested_monthly',
+    'total_emi_per_month',
+    'credit_utilization_ratio',
+    'outstanding_debt',
+    'num_credit_inquiries',
+    'changed_credit_limit',
+    'num_of_delayed_payment',
+    'delay_from_due_date',
+    'num_of_loan',
+    'interest_rate',
+    'num_credit_card',
+    'num_bank_accounts',
+    'monthly_inhand_salary',
+    'annual_income',
+]

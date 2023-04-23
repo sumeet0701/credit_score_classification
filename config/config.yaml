@@ -3,8 +3,9 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url : https://raw.githubusercontent.com/sumeet0701/credit_score_classification/main/dataset/clean_df.csv
+  dataset_download_url : https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip?raw=true
   raw_data_dir: raw_data
+  tgz_download_dir: tgz_data
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test
