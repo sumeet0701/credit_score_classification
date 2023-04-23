@@ -1,0 +1,25 @@
+training_pipeline_config:
+  pipeline_name: Credit_score_Classification
+  artifact_dir: artifact
+
+data_ingestion_config:
+  dataset_download_url : https://raw.githubusercontent.com/sumeet0701/credit_score_classification/main/dataset/clean_df.csv
+  raw_data_dir: raw_data
+  ingested_dir: ingested_data
+  ingested_train_dir: train
+  ingested_test_dir: test
+  
+  
+data_validation_config:
+  schema_dir: config
+  schema_file_name: schema.yaml
+  report_file_name: report.json
+  report_page_file_name: report.html
+
+data_transformation_config:
+  tranformed_dir: transformed_data
+  transformed_train_dir: train
+  transformed_test_dir: test
+  preprocessing_dir: preprocessed
+  feature_engineering_object_file_name: feat_eng.pkl
+  preprocessed_object_file_name: preprocessed.pkl
