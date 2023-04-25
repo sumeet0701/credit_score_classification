@@ -1,28 +1,80 @@
-categorical_columns = [
-    'credit_score',
-    'payment_behaviour',
-    'payment_of_min_amount',
-    'credit_history_age',
-    'credit_mix',
-    'type_of_loan',
-    'age',
-    'month'
-]
+SampleFileName: clean_df.csv
+NumberOfColumns: 22
+Columns:
+  Month: int
+  Age: float64
+  Occupation: category
+  Annual_Income: float64
+  Monthly_Inhand_Salary: float64
+  Num_Bank_Accounts: float64
+  Num_Credit_Card: float64
+  Interest_Rate: float64
+  Num_of_Loan: float64
+  Delay_from_due_date: float64
+  Num_of_Delayed_Payment: float64
+  Changed_Credit_Limit: float64
+  Num_Credit_Inquiries: float64
+  Credit_Mix: category
+  Outstanding_Debt: float64
+  Credit_Utilization_Ratio: float64
+  Credit_History_Age: float64
+  Total_EMI_per_month: float64
+  Amount_invested_monthly: float64
+  Payment_Behaviour: category
+  Monthly_Balance: float64
+  Credit_Score: category
 
-numerical_columns = [
-    'monthly_balance',
-    'amount_invested_monthly',
-    'total_emi_per_month',
-    'credit_utilization_ratio',
-    'outstanding_debt',
-    'num_credit_inquiries',
-    'changed_credit_limit',
-    'num_of_delayed_payment',
-    'delay_from_due_date',
-    'num_of_loan',
-    'interest_rate',
-    'num_credit_card',
-    'num_bank_accounts',
-    'monthly_inhand_salary',
-    'annual_income',
-]
+
+target_columns:
+  Credit_Score
+
+
+numerical_columns: # outlier handling
+  Age
+  Delay_from_due_date
+  Interest_Rate
+  Num_of_Delayed_Payment
+  Num_Credit_Card
+  Annual_Income
+  Monthly_Inhand_Salary
+  Outstanding_Debt
+  Credit_Utilization_Ratio
+  Credit_History_Age
+  Total_EMI_per_month
+  Amount_invested_monthly
+  Monthly_Balance
+  Num_Bank_Accounts
+  Num_Credit_Inquiries
+  Changed_Credit_Limit
+  Num_of_Loan
+
+Transformation_columns:
+  Age
+  Delay_from_due_date
+  Num_of_Delayed_Payment
+  Annual_Income
+  Monthly_Inhand_Salary
+  Interest_Rate
+  Outstanding_Debt
+  Credit_Utilization_Ratio
+  Credit_History_Age
+  Total_EMI_per_month
+  Amount_invested_monthly
+  Monthly_Balance
+  Num_Bank_Accounts
+  Num_Credit_Inquiries
+  Num_Credit_Card
+  Changed_Credit_Limit
+  Num_of_Loan
+
+
+Ordinal_encoder: # label encoding
+  Month
+  Credit_Mix
+  Payment_Behaviour
+  Payment_of_Min_Amount
+  Credit_Score
+
+Label_encoder: # label encoding
+  Occupation
+  Payment_Behaviour

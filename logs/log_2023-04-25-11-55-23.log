@@ -1,0 +1,70 @@
+[2023-04-25 11:55:23,741] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-04-25 11:55:28,696] root - INFO - Training Pipeline Config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact')
+[2023-04-25 11:55:28,696] root - INFO - 
+******************** Initiating the Training Pipeline ********************
+
+
+[2023-04-25 11:55:28,696] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\raw_data', ingested_train_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\ingested_data\\train', ingested_test_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\ingested_data\\test') 
+[2023-04-25 11:55:28,698] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-04-25 11:55:28,704] root - INFO - Connection with DB created successfully!!!
+[2023-04-25 11:55:28,705] root - INFO - Downloading file from: [https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\tgz_data\rental_bike_data.zip]
+[2023-04-25 11:55:42,855] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\tgz_data\rental_bike_data.zip] has been downloaded successfully
+[2023-04-25 11:55:42,855] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\tgz_data\rental_bike_data.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\raw_data]
+[2023-04-25 11:55:42,949] root - INFO - Extraction completed successfully
+[2023-04-25 11:55:44,366] root - INFO - Inserting file: [clean_df.csv] into DB
+[2023-04-25 11:55:44,366] root - INFO - Inserting data into database:[Credit_score_DB] in collection: [Credit_score_data]
+[2023-04-25 11:55:46,854] root - INFO - Insertion into DB is successful!!! 
+[2023-04-25 11:55:46,854] root - INFO - Fetching entire data from DB
+[2023-04-25 11:55:48,533] root - INFO - Data Fetched from collection: [None] successfully!!!
+[2023-04-25 11:55:48,565] root - INFO - Entire data fetched successfully from DB!!!
+[2023-04-25 11:55:48,565] root - INFO - Splitting Dataset into train and test
+[2023-04-25 11:55:48,596] root - INFO - total no of columns:22 and rows:80000
+[2023-04-25 11:55:48,596] root - INFO - total no of columns:22 and rows:20000
+[2023-04-25 11:55:48,596] root - INFO - Inserting new Training Data into DB
+[2023-04-25 11:55:49,388] root - INFO - Inserting data into database:[Credit_score_DB] in collection: [Credit_score_data]
+[2023-04-25 11:55:51,163] root - INFO - Insertion into DB is successful!!! 
+[2023-04-25 11:55:51,215] root - INFO - Inserting new Test Data into DB
+[2023-04-25 11:55:51,396] root - INFO - Inserting data into database:[Credit_score_DB] in collection: [Credit_score_data]
+[2023-04-25 11:55:51,792] root - INFO - Insertion into DB is successful!!! 
+[2023-04-25 11:55:51,809] root - INFO - Exporting training dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\ingested_data\train\train.csv]
+[2023-04-25 11:55:52,790] root - INFO - Exporting test dataset to file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\ingested_data\test\test.csv]
+[2023-04-25 11:55:53,046] root - INFO - Data Ingestion Artifact: [DataIngestionArtifact(train_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\ingested_data\\train\\train.csv', test_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-04-25-11-55-23\\ingested_data\\test\\test.csv', is_ingested=True, message='Data ingestion completed successfully')]
+[2023-04-25 11:55:53,154] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-04-25 11:55:53,155] root - INFO - Data Validation config: DataValidationConfig(schema_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\config\\schema.yaml', report_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\report.json', report_page_file_path='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\report.html')
+[2023-04-25 11:55:53,155] root - INFO - 
+******************** Data Validation log started ********************
+
+[2023-04-25 11:55:53,158] root - INFO - Validating the schema of the dataset
+[2023-04-25 11:55:53,158] root - INFO - Checking File Name
+[2023-04-25 11:55:53,473] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [51] execption block line number: [55]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [42] execption block line number: [44]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_validation.py] at 
+                        try block line number: [265] execption block line number: [279]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_validation.py] at 
+                        try block line number: [209] execption block line number: [217]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_validation.py] at 
+                        try block line number: [174] execption block line number: [197]
+                        error message: [No of columns is not correct in file: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-04-25-11-55-23\raw_data\dataset_clean\clean_df.csv]!!!]]]]]
+[2023-04-25 11:55:53,479] root - INFO - 
+******************** Data Validation log completed ********************
+
+[2023-04-25 11:55:53,479] root - INFO - 
+******************** Training Pipeline Complete ********************
+
+

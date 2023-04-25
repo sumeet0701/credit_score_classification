@@ -94,12 +94,15 @@ class DataIngestion:
             logging.info(f"Fetching entire data from DB")
             dataframe = self.db.fetch_df()
             #columns = ['ssn', 'name',"id",'customer_id']
-            dataframe.drop(columns = ["_id",'SSN', 'Name',"ID",'Customer_ID'],axis=1,inplace=True)
+            dataframe.drop(columns = ["_id",'SSN', 'Name',"ID",'Customer_ID',"Type_of_Loan",
+                                      "Payment_of_Min_Amount"],axis=1,inplace=True)
             logging.info(f"Entire data fetched successfully from DB!!!")
 
             # Splitting the dataset into train and test data based on date indexing
             logging.info("Splitting Dataset into train and test")
             train_set, test_set = train_test_split(dataframe, test_size=0.2, random_state=42)
+            logging.info(f"total no of columns:{train_set.shape[1]} and rows:{train_set.shape[0]}")
+            logging.info(f"total no of columns:{test_set.shape[1]} and rows:{test_set.shape[0]}")
 
             logging.info("Inserting new Training Data into DB")
             self.db.create_and_check_collection(collection_name="Training")

@@ -25,8 +25,17 @@ DATA_INGESTION_TRAIN_DIR_KEY = "ingested_train_dir"
 DATA_INGESTION_TEST_DIR_KEY = "ingested_test_dir"
 
 # Database related variables
-DATABASE_CLIENT_URL_KEY = "mongodb://localhost:27017"
+DATABASE_CLIENT_URL_KEY = "mongodb://localhost:27017/?readPreference=primary&ssl=false&directConnection=true"
 DATABASE_NAME_KEY = "Credit_score_DB"
 DATABASE_COLLECTION_NAME_KEY = "Credit_score_data"
 DATABASE_TRAINING_COLLECTION_NAME_KEY = "Training"
 DATABASE_TEST_COLLECTION_NAME_KEY = "Test"
+
+
+# Data Validation related variables
+DATA_VALIDATION_CONFIG_KEY = "data_validation_config"
+DATA_VALIDATION_ARTIFACT_DIR_NAME = "data_validation"
+DATA_VALIDATION_SCHEMA_FILE_NAME_KEY = "schema_file_name"
+DATA_VALIDATION_SCHEMA_DIR_KEY = "schema_dir"
+DATA_VALIDATION_REPORT_FILE_NAME_KEY = "report_file_name"
+DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY = "report_page_file_name"
