@@ -80,13 +80,13 @@ class DataTransformation:
                 ('onehot_pipeline', onehot_pipeline, onehot_columns),
                 ('ordinal_pipeline', ordinal_pipeline, ordinal_columns),
                 ('power_transformer', transform_pipeline, transform_columns)
-            ])
+            ], remainder= "passthrough")
                          
             return preprocessor
         
         except Exception as e:
             raise CustomException(e, sys) from e
-        
+    """        
     def _remove_outliers_IQR(self, col, df):
         try:
             percentile25 = df[col].quantile(0.25)
@@ -100,7 +100,7 @@ class DataTransformation:
         
         except Exception as e:
             raise CustomException(e, sys) from e 
-        
+    """        
     
     def initiate_data_transformation(self) -> DataTransformationArtifact:
         try:
@@ -125,14 +125,14 @@ class DataTransformation:
 
             logging.info(f"{numerical_columns}")
 
-            continuous_columns = ['Age','Annual_Income','Monthly_Inhand_Salary','Interest_Rate',
-                                  'Delay_from_due_date','Num_of_Delayed_Payment','Changed_Credit_Limit',
-                                  'Outstanding_Debt','Credit_Utilization_Ratio', 'Credit_History_Age',
-                                  'Total_EMI_per_month','Amount_invested_monthly','Monthly_Balance']
+            #continuous_columns = ['Age','Annual_Income','Monthly_Inhand_Salary','Interest_Rate',
+             #                     'Delay_from_due_date','Num_of_Delayed_Payment','Changed_Credit_Limit',
+              #                    'Outstanding_Debt','Credit_Utilization_Ratio', 'Credit_History_Age',
+                    #              'Total_EMI_per_month','Amount_invested_monthly','Monthly_Balance']
             #continuous_columns=[feature for feature in numerical_columns if len(train_df[feature].unique())>=25]
             #continuous_columns=[feature for feature in numerical_columns if len(train_df[feature].unique())>=25]
             #logging.info(f"{continuous_columns}")
-            
+            """
             for col in continuous_columns:
                 self._remove_outliers_IQR(col=col, df= train_df)
             
@@ -142,7 +142,7 @@ class DataTransformation:
                 self._remove_outliers_IQR(col=col, df= test_df)
                 
             logging.info(f"Outlier capped in test df")            
-
+            """
             logging.info(f"Splitting input and target feature from training and testing dataframe.")
             input_feature_train_df = train_df.drop(columns=[target_column_name], axis=1)
             target_feature_train_df = train_df[target_column_name]
@@ -150,11 +150,11 @@ class DataTransformation:
 
             input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
             target_feature_test_df = test_df[target_column_name]
+
             logging.info(f"{input_feature_train_df.columns}")
             logging.info(f"{target_feature_train_df}")
             logging.info(f"{input_feature_test_df.columns}")
             logging.info(f"{target_feature_test_df}")
-            logging.info(f"{preprocessing_obj.fit_transform(input_feature_train_df)}")
 
             logging.info(f"Applying preprocessing object on training dataframe and testing dataframe.")
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)

@@ -1,7 +1,7 @@
 {
       "data_drift": {
             "name": "data_drift",
-            "datetime": "2023-04-26 08:12:39.936962",
+            "datetime": "2023-04-26 20:02:02.841382",
             "data": {
                   "utility_columns": {
                         "date": null,
@@ -24,7 +24,6 @@
                         "Credit_Utilization_Ratio",
                         "Delay_from_due_date",
                         "Interest_Rate",
-                        "Month",
                         "Monthly_Balance",
                         "Monthly_Inhand_Salary",
                         "Num_Bank_Accounts",
@@ -45,7 +44,7 @@
                         "xbins": null
                   },
                   "metrics": {
-                        "n_features": 22,
+                        "n_features": 21,
                         "n_drifted_features": 0,
                         "share_drifted_features": 0.0,
                         "dataset_drift": false,
@@ -527,66 +526,6 @@
                               "feature_type": "num",
                               "stattest_name": "Wasserstein distance (normed)",
                               "drift_score": 0.01741091470402057,
-                              "drift_detected": false
-                        },
-                        "Month": {
-                              "current_small_hist": [
-                                    [
-                                          0.17835714285714288,
-                                          0.1802857142857143,
-                                          0.18350000000000008,
-                                          0.0,
-                                          0.17957142857142852,
-                                          0.1732142857142859,
-                                          0.0,
-                                          0.17757142857142852,
-                                          0.17771428571428566,
-                                          0.17835714285714283
-                                    ],
-                                    [
-                                          1.0,
-                                          1.7,
-                                          2.4,
-                                          3.0999999999999996,
-                                          3.8,
-                                          4.5,
-                                          5.199999999999999,
-                                          5.8999999999999995,
-                                          6.6,
-                                          7.3,
-                                          8.0
-                                    ]
-                              ],
-                              "ref_small_hist": [
-                                    [
-                                          0.178625,
-                                          0.17814285714285716,
-                                          0.17733928571428578,
-                                          0.0,
-                                          0.17832142857142852,
-                                          0.17991071428571448,
-                                          0.0,
-                                          0.17882142857142852,
-                                          0.17878571428571424,
-                                          0.17862499999999995
-                                    ],
-                                    [
-                                          1.0,
-                                          1.7,
-                                          2.4,
-                                          3.0999999999999996,
-                                          3.8,
-                                          4.5,
-                                          5.199999999999999,
-                                          5.8999999999999995,
-                                          6.6,
-                                          7.3,
-                                          8.0
-                                    ]
-                              ],
-                              "feature_type": "num",
-                              "stattest_name": "Wasserstein distance (normed)",
-                              "drift_score": 0.007229421603598691,
                               "drift_detected": false
                         },
                         "Monthly_Balance": {
@@ -1156,7 +1095,7 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.0062017239414012435,
+                              "drift_score": 0.00620172394140125,
                               "drift_detected": false
                         },
                         "Credit_Score": {
@@ -1264,7 +1203,7 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.012302952266253274,
+                              "drift_score": 0.012302952266253268,
                               "drift_detected": false
                         },
                         "Payment_Behaviour": {
@@ -1306,11 +1245,11 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.0069225059126271265,
+                              "drift_score": 0.006922505912627131,
                               "drift_detected": false
                         }
                   }
             }
       },
-      "timestamp": "2023-04-26 08:12:39.939975"
+      "timestamp": "2023-04-26 20:02:02.844381"
 }

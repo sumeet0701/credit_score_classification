@@ -1,7 +1,6 @@
 SampleFileName: clean_df.csv
-NumberOfColumns: 22
+NumberOfColumns: 21
 Columns:
-  Month: int
   Age: float64
   Occupation: category
   Annual_Income: float64
@@ -67,12 +66,12 @@ Transformation_columns:
 
 
 Oridnal_columns: 
-  Month
+  Occupation
+  Credit_Mix
 
 Onehot_columns: 
-  Credit_Mix
+  
   Payment_Behaviour
-  Occupation
   Credit_Score
 
 
