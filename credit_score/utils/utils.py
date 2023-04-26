@@ -63,7 +63,7 @@ def load_data(file_path: str, schema_file_path: str) -> pd.DataFrame:
 
         schema = dataset_schema[DATASET_SCHEMA_COLUMNS_KEY]
 
-        dataframe = pd.read_csv(file_path)
+        dataframe = pd.read_csv(file_path )
 
         error_message = ""
 

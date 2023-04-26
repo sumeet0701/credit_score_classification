@@ -25,36 +25,33 @@ Columns:
   Credit_Score: category
 
 
-target_columns:
+target_column:
   Credit_Score
 
 
-numerical_columns: # outlier handling
+numerical_columns: 
   Age
-  Delay_from_due_date
-  Interest_Rate
-  Num_of_Delayed_Payment
-  Num_Credit_Card
   Annual_Income
   Monthly_Inhand_Salary
+  Interest_Rate
+  Delay_from_due_date
+  Num_of_Delayed_Payment
+  Changed_Credit_Limit
   Outstanding_Debt
   Credit_Utilization_Ratio
   Credit_History_Age
   Total_EMI_per_month
   Amount_invested_monthly
   Monthly_Balance
-  Num_Bank_Accounts
-  Num_Credit_Inquiries
-  Changed_Credit_Limit
-  Num_of_Loan
+
 
 Transformation_columns:
-  Age
   Delay_from_due_date
+  Interest_Rate
   Num_of_Delayed_Payment
+  Num_Credit_Card
   Annual_Income
   Monthly_Inhand_Salary
-  Interest_Rate
   Outstanding_Debt
   Credit_Utilization_Ratio
   Credit_History_Age
@@ -63,18 +60,23 @@ Transformation_columns:
   Monthly_Balance
   Num_Bank_Accounts
   Num_Credit_Inquiries
-  Num_Credit_Card
   Changed_Credit_Limit
   Num_of_Loan
 
 
-Ordinal_encoder: # label encoding
+
+
+Oridnal_columns: 
   Month
+
+Onehot_columns: 
   Credit_Mix
   Payment_Behaviour
-  Payment_of_Min_Amount
+  Occupation
   Credit_Score
 
-Label_encoder: # label encoding
-  Occupation
-  Payment_Behaviour
+
+
+
+
+  

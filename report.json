@@ -1,7 +1,7 @@
 {
       "data_drift": {
             "name": "data_drift",
-            "datetime": "2023-04-25 16:27:45.200639",
+            "datetime": "2023-04-26 08:12:39.936962",
             "data": {
                   "utility_columns": {
                         "date": null,
@@ -1306,11 +1306,11 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.006922505912627131,
+                              "drift_score": 0.0069225059126271265,
                               "drift_detected": false
                         }
                   }
             }
       },
-      "timestamp": "2023-04-25 16:27:45.204584"
+      "timestamp": "2023-04-26 08:12:39.939975"
 }
