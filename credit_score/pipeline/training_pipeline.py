@@ -10,12 +10,15 @@ from credit_score.exception import CustomException
 from credit_score.entity.config_entity import DataIngestionConfig
 from credit_score.entity.config_entity import DataValidationConfig
 from credit_score.entity.config_entity import DataTransformationConfig
+from credit_score.entity.config_entity import ModelTrainerConfig
 from credit_score.entity.artifact_entity import DataIngestionArtifact
+from credit_score.entity.artifact_entity import ModelTrainerArtifact
 from credit_score.entity.artifact_entity import DataValidationArtifact
 from credit_score.entity.artifact_entity import DataTransformationArtifact
 from credit_score.components.data_ingestion import DataIngestion
 from credit_score.components.data_validation import DataValidaton
 from credit_score.components.data_transformation import DataTransformation
+from credit_score.components.model_trainer import ModelTrainer
 import os, sys
 import pandas as pd
 
@@ -57,6 +60,17 @@ class Pipeline():
             return data_transformation.initiate_data_transformation()
         except Exception as e:
             raise CustomException(e,sys) from e
+        
+    def start_model_training(self,data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
+        try:
+            model_trainer = ModelTrainer(model_trainer_config=self.config.get_model_trainer_config(),
+                                        data_transformation_artifact=data_transformation_artifact)   
+
+            return model_trainer.initiate_model_training()
+        except Exception as e:
+            raise CustomException(e,sys) from e  
+
+     
 
     def run_pipeline(self):
         try:
@@ -66,9 +80,11 @@ class Pipeline():
 
             data_validation_artifact = self.start_data_validation(data_ingestion_config=data_ingestion_config,
                                                             data_ingestion_artifact=data_ingestion_artifact)
+            
             data_transformation_artifact = self.start_data_transformation(data_ingestion_artifact=data_ingestion_artifact,
                                                              data_validation_artifact=data_validation_artifact)
             
+            model_trainer_artifact = self.start_model_training(data_transformation_artifact=data_transformation_artifact)
         except Exception as e:
             raise CustomException(e, sys) from e
         

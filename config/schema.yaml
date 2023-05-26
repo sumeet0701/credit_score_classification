@@ -1,22 +1,29 @@
 SampleFileName: clean_df.csv
-NumberOfColumns: 21
+NumberOfColumns: 28
 Columns:
-  Age: float64
+  ID: int
+  Customer_ID: int
+  Month: int
+  Name: category
+  Age: float
+  SSN: float
   Occupation: category
-  Annual_Income: float64
-  Monthly_Inhand_Salary: float64
-  Num_Bank_Accounts: float64
-  Num_Credit_Card: float64
-  Interest_Rate: float64
-  Num_of_Loan: float64
-  Delay_from_due_date: float64
-  Num_of_Delayed_Payment: float64
-  Changed_Credit_Limit: float64
-  Num_Credit_Inquiries: float64
+  Annual_Income: float
+  Monthly_Inhand_Salary: float
+  Num_Bank_Accounts: float
+  Num_Credit_Card: float
+  Interest_Rate: float
+  Num_of_Loan: float
+  Type_of_Loan: category
+  Delay_from_due_date: float
+  Num_of_Delayed_Payment: float
+  Changed_Credit_Limit: float
+  Num_Credit_Inquiries: float
   Credit_Mix: category
-  Outstanding_Debt: float64
+  Outstanding_Debt: float
   Credit_Utilization_Ratio: float64
   Credit_History_Age: float64
+  Payment_of_Min_Amount: category
   Total_EMI_per_month: float64
   Amount_invested_monthly: float64
   Payment_Behaviour: category
@@ -64,7 +71,6 @@ Transformation_columns:
 
 
 
-
 Oridnal_columns: 
   Occupation
   Credit_Mix
@@ -74,7 +80,12 @@ Onehot_columns:
   Payment_Behaviour
   Credit_Score
 
-
+drop_columns: 
+  _id
+  SSN
+  Name
+  ID
+  Customer_ID
 
 
 

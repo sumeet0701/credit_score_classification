@@ -94,8 +94,6 @@ class DataIngestion:
             logging.info(f"Fetching entire data from DB")
             dataframe = self.db.fetch_df()
             #columns = ['ssn', 'name',"id",'customer_id']
-            dataframe.drop(columns = ["_id",'SSN', 'Name',"ID",'Customer_ID',"Type_of_Loan",
-                                      "Payment_of_Min_Amount","Month"],axis=1,inplace=True)
             logging.info(f"Entire data fetched successfully from DB!!!")
 
             # Splitting the dataset into train and test data based on date indexing

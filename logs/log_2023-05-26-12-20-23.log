@@ -1,0 +1,43 @@
+[2023-05-26 12:20:23,557] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-05-26 12:20:30,863] root - INFO - Training Pipeline Config: TrainingPipelineConfig(artifact_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact')
+[2023-05-26 12:20:30,864] root - INFO - 
+******************** Initiating the Training Pipeline ********************
+
+
+[2023-05-26 12:20:30,864] root - INFO - Data Ingestion Config : DataIngestionConfig(dataset_download_url='https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip?raw=true', tgz_download_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-05-26-12-20-23\\tgz_data', raw_data_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-05-26-12-20-23\\raw_data', ingested_train_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-05-26-12-20-23\\ingested_data\\train', ingested_test_dir='C:\\Users\\Sumeet Maheshwari\\Desktop\\end to end project\\credit_score_prediction\\credit_score_classification\\Credit_score_Classification\\artifact\\data_ingestion\\2023-05-26-12-20-23\\ingested_data\\test') 
+[2023-05-26 12:20:30,864] root - INFO - 
+******************** Data Ingestion log started ********************
+
+[2023-05-26 12:20:30,871] root - INFO - Connection with DB created successfully!!!
+[2023-05-26 12:20:30,872] root - INFO - Downloading file from: [https://github.com/sumeet0701/credit_score_classification/blob/main/dataset/dataset_clean.zip?raw=true] into : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-05-26-12-20-23\tgz_data\rental_bike_data.zip]
+[2023-05-26 12:20:36,011] root - INFO - File: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-05-26-12-20-23\tgz_data\rental_bike_data.zip] has been downloaded successfully
+[2023-05-26 12:20:36,012] root - INFO - Extracting zipped file : [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-05-26-12-20-23\tgz_data\rental_bike_data.zip] into dir: [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\Credit_score_Classification\artifact\data_ingestion\2023-05-26-12-20-23\raw_data]
+[2023-05-26 12:20:36,142] root - INFO - Extraction completed successfully
+[2023-05-26 12:21:06,302] root - ERROR - 
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [79] execption block line number: [89]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\pipeline\training_pipeline.py] at 
+                        try block line number: [37] execption block line number: [39]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_ingestion.py] at 
+                        try block line number: [144] execption block line number: [146]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\data_ingestion.py] at 
+                        try block line number: [84] execption block line number: [137]
+                        error message: [
+                        error occured in script: 
+                        [C:\Users\Sumeet Maheshwari\Desktop\end to end project\credit_score_prediction\credit_score_classification\credit_score\components\db_operation.py] at 
+                        try block line number: [25] execption block line number: [38]
+                        error message: [localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 647056b6eb1fc7039038113b, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>]]]]]
+[2023-05-26 12:21:06,310] root - INFO - 
+******************** Data Ingestion log completed ********************
+
+[2023-05-26 12:21:06,310] root - INFO - 
+******************** Training Pipeline Complete ********************
+
+

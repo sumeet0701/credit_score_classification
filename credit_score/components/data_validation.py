@@ -168,7 +168,8 @@ class DataValidaton:
         try:
             data = pd.read_csv(file)
             # Finding no of columns in the dataset
-            no_of_columns = data.shape[1]-7
+            logging.info(f"total no of columns:{data.shape[1]} and rows:{data.shape[0]}")
+            no_of_columns = data.shape[1]
             logging.info(f"total no of columns:{data.shape[1]} and rows:{data.shape[0]}")
             # Checking if the no of columns in dataset is as per defined schema
             if no_of_columns != self.dataset_schema["NumberOfColumns"]:
@@ -176,9 +177,6 @@ class DataValidaton:
 
             columns = list(data.columns)
             logging.info(f"{list(data.columns)}")
-            lst = ['SSN', 'Name',"ID",'Customer_ID',"Type_of_Loan", "Payment_of_Min_Amount","Month"]
-            for i in lst:
-                columns.remove(i)
 
 
             # Checking for columns name , whether they are as per the defined schema
